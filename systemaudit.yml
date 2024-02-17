@@ -1,8 +1,7 @@
 ---
-- name:
-  hosts:
+- name: systemaudit
+  hosts: linux_servers
   tasks:
-
     - name: Ensure audit package is installed
       ansible.builtin.dnf:
         name: audit
