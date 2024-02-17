@@ -1,8 +1,7 @@
 ---
-- name:
-  hosts:
+- name: kernel
+  hosts: linux_servers
   tasks:
-
     - name: Harden kernel parameters
       ansible.posix.sysctl:
         name: "{{ item.name }}"
