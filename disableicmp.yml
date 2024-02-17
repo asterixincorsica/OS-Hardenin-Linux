@@ -1,8 +1,7 @@
 ---
-- name:
-  hosts:
+- name: disableicmp
+  hosts: linux_servers
   tasks:
-
     - name: Disable ICMP echo and redirects
       ansible.posix.sysctl:
         name: "{{ item.name }}"
